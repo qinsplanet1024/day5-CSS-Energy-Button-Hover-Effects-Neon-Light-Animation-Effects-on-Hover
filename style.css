@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4ebeb;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fbb6b9;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+    transition: .5s;
+    transition-delay: 0s;
+}
+.container a:hover{
+    transition-delay: 1.5s;
+    color: #000;
+    box-shadow: 0 0 10px #fbb6b9,
+                0 0 20px #fbb6b9,
+                0 0 40px #fbb6b9,
+                0 0 80px #fbb6b9,
+                0 0 160px #fbb6b9;
+}
+.container a span{
+    position: relative;
+    z-index: 100;
+}
+.container a:nth-child(2){
+    filter: hue-rotate(80deg);
+}
+.container a::before{
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: #fbb6b9;
+    box-shadow: 5px -8px #fbb6b9,
+                5px 8px #fbb6b9;
+    transition: width .5s, left .5s, height .5s, box-shadow .5s;
+    transition-delay: 1s, .5s, 0s, 0s;
+}
+.container a:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 #fbb6b9,
+                5px 0 0 #fbb6b9;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+}
+.container a::after{
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: #fbb6b9;
+    box-shadow: -5px -8px #fbb6b9,
+                -5px 8px #fbb6b9;
+    transition: width .5s, right .5s, height .5s, box-shadow .5s;
+    transition-delay: 1s, .5s, 0s, 0s;
+}
+.container a:hover::after{
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0 0 #fbb6b9,
+                -5px 0 0 #fbb6b9;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+}
